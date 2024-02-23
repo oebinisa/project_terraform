@@ -18,7 +18,7 @@ resource "aws_instance" "instance_2" {
   subnet_id              = aws_default_subnet.default_az2.id
   vpc_security_group_ids = [aws_security_group.ec2_security_group.id]
   key_name               = var.keypair
-  user_data              = file("${path.module}/install_website.sh")
+  user_data              = file("${path.module}/install_website_python.sh")
 
   tags = {
     Name = "website server 2"
